@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderWidth: 1,
     borderColor: 'red',
+    marginHorizontal: 20,
   },
   img: {
     width: 300,
