@@ -1,11 +1,12 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import CarCard from '../../components/CarCard';
 
 const Index = () => {
   return (
-    <View>
-      <Text>Discover page</Text>
-    </View>
+    <>
+      <CarCard />
+    </>
   );
 };
 
