@@ -6,15 +6,41 @@ import DiscoverScreen from '../screens/Discover';
 import FavoriteScreen from '../screens/Favorite';
 import ProfileScreen from '../screens/Profile';
 import SearchScreen from '../screens/Search';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 const Tab = createBottomTabNavigator();
 
 const Index = () => {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="DiscoverScreen" component={DiscoverScreen} />
-      <Tab.Screen name="FavoriteScreen" component={FavoriteScreen} />
-      <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
-      <Tab.Screen name="SearcScreen" component={SearchScreen} />
+      <Tab.Screen
+        name="DiscoverScreen"
+        component={DiscoverScreen}
+        options={({route}) => ({
+          tabBarIcon: ({color}) => <Icon name="home" size={26} color="black" />,
+        })}
+      />
+      <Tab.Screen
+        name="SearcScreen"
+        component={SearchScreen}
+        options={({route}) => ({
+          tabBarIcon: ({color}) => <Icon name="home" size={26} color="black" />,
+        })}
+      />
+      <Tab.Screen
+        name="FavoriteScreen"
+        component={FavoriteScreen}
+        options={({route}) => ({
+          tabBarIcon: ({color}) => <Icon name="home" size={26} color="black" />,
+        })}
+      />
+      <Tab.Screen
+        name="ProfileScreen"
+        component={ProfileScreen}
+        options={({route}) => ({
+          tabBarIcon: ({color}) => <Icon name="home" size={26} color="black" />,
+        })}
+      />
     </Tab.Navigator>
   );
 };

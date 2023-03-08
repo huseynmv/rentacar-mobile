@@ -1,0 +1,41 @@
+"filename", "language", "JSON with Comments", "TypeScript JSX", "JSON", "JavaScript", "Objective-C", "C++", "Objective-C++", "XML", "Groovy", "Batch", "Properties", "Java", "comment", "blank", "total"
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\.eslintrc.js", "JavaScript", 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 5
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\.prettierrc.js", "JavaScript", 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\.watchmanconfig", "JSON", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\App.tsx", "TypeScript JSX", 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 18
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\__tests__\App-test.tsx", "TypeScript JSX", 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 15
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\build.gradle", "Groovy", 0, 0, 0, 0, 0, 0, 0, 0, 75, 0, 0, 0, 75, 21, 171
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\debug\AndroidManifest.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 3, 14
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\debug\java\com\rentacarmobile\ReactNativeFlipper.java", "Java", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 12, 6, 76
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\AndroidManifest.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 3, 26
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\java\com\rentacarmobile\MainActivity.java", "Java", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 11, 5, 36
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\java\com\rentacarmobile\MainApplication.java", "Java", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 3, 10, 63
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\res\drawable\rn_edit_text_material.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 23, 3, 37
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\res\values\strings.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\res\values\styles.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 2, 3, 10
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\release\java\com\rentacarmobile\ReactNativeFlipper.java", "Java", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 11, 3, 21
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\build.gradle", "Groovy", 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 2, 3, 22
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\gradle.properties", "Properties", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 28, 10, 45
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\gradle\wrapper\gradle-wrapper.properties", "Properties", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 1, 6
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\gradlew.bat", "Batch", 0, 0, 0, 0, 0, 0, 0, 0, 0, 68, 0, 0, 0, 22, 90
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\settings.gradle", "Groovy", 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 1, 5
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\app.json", "JSON", 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\babel.config.js", "JavaScript", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\index.js", "JavaScript", 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 10
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobileTests\rentacarMobileTests.m", "Objective-C", 0, 0, 0, 0, 53, 0, 0, 0, 0, 0, 0, 0, 0, 14, 67
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\AppDelegate.h", "C++", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 3, 7
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\AppDelegate.mm", "Objective-C++", 0, 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 7, 8, 37
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\Images.xcassets\AppIcon.appiconset\Contents.json", "JSON", 0, 0, 53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 54
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\Images.xcassets\Contents.json", "JSON", 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\LaunchScreen.storyboard", "XML", 0, 0, 0, 0, 0, 0, 0, 46, 0, 0, 0, 0, 1, 1, 48
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\main.m", "Objective-C", 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 3, 11
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\metro.config.js", "JavaScript", 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 6, 2, 18
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\package-lock.json", "JSON", 0, 0, 21648, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 21649
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\package.json", "JSON", 0, 0, 41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 42
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\src\navigation\index.tsx", "TypeScript JSX", 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 25
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\src\screens\Discover\index.tsx", "TypeScript JSX", 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 15
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\src\screens\Favorite\index.tsx", "TypeScript JSX", 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 15
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\src\screens\Profile\index.tsx", "TypeScript JSX", 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 15
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\src\screens\Search\index.tsx", "TypeScript JSX", 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 15
+"c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\tsconfig.json", "JSON with Comments", 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"Total", "-", 3, 87, 21753, 28, 61, 4, 22, 99, 96, 68, 12, 135, 188, 164, 22720

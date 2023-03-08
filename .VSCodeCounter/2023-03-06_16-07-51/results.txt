@@ -1,0 +1,114 @@
+Date : 2023-03-06 16:07:51
+Directory : c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile
+Total : 39 files,  22368 codes, 188 comments, 164 blanks, all 22720 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          6 |     21,753 |          0 |          4 |     21,757 |
+| Java               |          4 |        135 |         37 |         24 |        196 |
+| XML                |          6 |         99 |         26 |         14 |        139 |
+| Groovy             |          3 |         96 |         77 |         25 |        198 |
+| TypeScript JSX     |          7 |         87 |          4 |         27 |        118 |
+| Batch              |          1 |         68 |          0 |         22 |         90 |
+| Objective-C        |          2 |         61 |          0 |         17 |         78 |
+| JavaScript         |          5 |         28 |          9 |          8 |         45 |
+| Objective-C++      |          1 |         22 |          7 |          8 |         37 |
+| Properties         |          2 |         12 |         28 |         11 |         51 |
+| C++                |          1 |          4 |          0 |          3 |          7 |
+| JSON with Comments |          1 |          3 |          0 |          1 |          4 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                     | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                        |         39 |     22,368 |        188 |        164 |     22,720 |
+| . (Files)                                                                                                                                |         11 |     21,740 |          9 |         14 |     21,763 |
+| __tests__                                                                                                                                |          1 |          7 |          4 |          4 |         15 |
+| android                                                                                                                                  |         15 |        364 |        167 |         95 |        626 |
+| android (Files)                                                                                                                          |          4 |         96 |         30 |         36 |        162 |
+| android\app                                                                                                                              |         10 |        263 |        137 |         58 |        458 |
+| android\app (Files)                                                                                                                      |          1 |         75 |         75 |         21 |        171 |
+| android\app\src                                                                                                                          |          9 |        188 |         62 |         37 |        287 |
+| android\app\src\debug                                                                                                                    |          2 |         69 |         12 |          9 |         90 |
+| android\app\src\debug (Files)                                                                                                            |          1 |         11 |          0 |          3 |         14 |
+| android\app\src\debug\java                                                                                                               |          1 |         58 |         12 |          6 |         76 |
+| android\app\src\debug\java\com                                                                                                           |          1 |         58 |         12 |          6 |         76 |
+| android\app\src\debug\java\com\rentacarmobile                                                                                            |          1 |         58 |         12 |          6 |         76 |
+| android\app\src\main                                                                                                                     |          6 |        112 |         39 |         25 |        176 |
+| android\app\src\main (Files)                                                                                                             |          1 |         23 |          0 |          3 |         26 |
+| android\app\src\main\java                                                                                                                |          2 |         70 |         14 |         15 |         99 |
+| android\app\src\main\java\com                                                                                                            |          2 |         70 |         14 |         15 |         99 |
+| android\app\src\main\java\com\rentacarmobile                                                                                             |          2 |         70 |         14 |         15 |         99 |
+| android\app\src\main\res                                                                                                                 |          3 |         19 |         25 |          7 |         51 |
+| android\app\src\main\res\drawable                                                                                                        |          1 |         11 |         23 |          3 |         37 |
+| android\app\src\main\res\values                                                                                                          |          2 |          8 |          2 |          4 |         14 |
+| android\app\src\release                                                                                                                  |          1 |          7 |         11 |          3 |         21 |
+| android\app\src\release\java                                                                                                             |          1 |          7 |         11 |          3 |         21 |
+| android\app\src\release\java\com                                                                                                         |          1 |          7 |         11 |          3 |         21 |
+| android\app\src\release\java\com\rentacarmobile                                                                                          |          1 |          7 |         11 |          3 |         21 |
+| android\gradle                                                                                                                           |          1 |          5 |          0 |          1 |          6 |
+| android\gradle\wrapper                                                                                                                   |          1 |          5 |          0 |          1 |          6 |
+| ios                                                                                                                                      |          7 |        192 |          8 |         31 |        231 |
+| ios\rentacarMobile                                                                                                                       |          6 |        139 |          8 |         17 |        164 |
+| ios\rentacarMobile (Files)                                                                                                               |          4 |         80 |          8 |         15 |        103 |
+| ios\rentacarMobileTests                                                                                                                  |          1 |         53 |          0 |         14 |         67 |
+| ios\rentacarMobile\Images.xcassets                                                                                                       |          2 |         59 |          0 |          2 |         61 |
+| ios\rentacarMobile\Images.xcassets (Files)                                                                                               |          1 |          6 |          0 |          1 |          7 |
+| ios\rentacarMobile\Images.xcassets\AppIcon.appiconset                                                                                    |          1 |         53 |          0 |          1 |         54 |
+| src                                                                                                                                      |          5 |         65 |          0 |         20 |         85 |
+| src\navigation                                                                                                                           |          1 |         21 |          0 |          4 |         25 |
+| src\screens                                                                                                                              |          4 |         44 |          0 |         16 |         60 |
+| src\screens\Discover                                                                                                                     |          1 |         11 |          0 |          4 |         15 |
+| src\screens\Favorite                                                                                                                     |          1 |         11 |          0 |          4 |         15 |
+| src\screens\Profile                                                                                                                      |          1 |         11 |          0 |          4 |         15 |
+| src\screens\Search                                                                                                                       |          1 |         11 |          0 |          4 |         15 |
++------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                                 | language           | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\.eslintrc.js                                                            | JavaScript         |          4 |          0 |          1 |          5 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\.prettierrc.js                                                          | JavaScript         |          7 |          0 |          1 |          8 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\.watchmanconfig                                                         | JSON               |          1 |          0 |          0 |          1 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\App.tsx                                                                 | TypeScript JSX     |         15 |          0 |          3 |         18 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\__tests__\App-test.tsx                                                  | TypeScript JSX     |          7 |          4 |          4 |         15 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\build.gradle                                                | Groovy             |         75 |         75 |         21 |        171 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\debug\AndroidManifest.xml                               | XML                |         11 |          0 |          3 |         14 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\debug\java\com\rentacarmobile\ReactNativeFlipper.java   | Java               |         58 |         12 |          6 |         76 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\AndroidManifest.xml                                | XML                |         23 |          0 |          3 |         26 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\java\com\rentacarmobile\MainActivity.java          | Java               |         20 |         11 |          5 |         36 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\java\com\rentacarmobile\MainApplication.java       | Java               |         50 |          3 |         10 |         63 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\res\drawable\rn_edit_text_material.xml             | XML                |         11 |         23 |          3 |         37 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\res\values\strings.xml                             | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\main\res\values\styles.xml                              | XML                |          5 |          2 |          3 |         10 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\app\src\release\java\com\rentacarmobile\ReactNativeFlipper.java | Java               |          7 |         11 |          3 |         21 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\build.gradle                                                    | Groovy             |         17 |          2 |          3 |         22 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\gradle.properties                                               | Properties         |          7 |         28 |         10 |         45 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\gradle\wrapper\gradle-wrapper.properties                        | Properties         |          5 |          0 |          1 |          6 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\gradlew.bat                                                     | Batch              |         68 |          0 |         22 |         90 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\android\settings.gradle                                                 | Groovy             |          4 |          0 |          1 |          5 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\app.json                                                                | JSON               |          4 |          0 |          0 |          4 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\babel.config.js                                                         | JavaScript         |          3 |          0 |          1 |          4 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\index.js                                                                | JavaScript         |          4 |          3 |          3 |         10 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobileTests\rentacarMobileTests.m                           | Objective-C        |         53 |          0 |         14 |         67 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\AppDelegate.h                                        | C++                |          4 |          0 |          3 |          7 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\AppDelegate.mm                                       | Objective-C++      |         22 |          7 |          8 |         37 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\Images.xcassets\AppIcon.appiconset\Contents.json     | JSON               |         53 |          0 |          1 |         54 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\Images.xcassets\Contents.json                        | JSON               |          6 |          0 |          1 |          7 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\LaunchScreen.storyboard                              | XML                |         46 |          1 |          1 |         48 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\ios\rentacarMobile\main.m                                               | Objective-C        |          8 |          0 |          3 |         11 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\metro.config.js                                                         | JavaScript         |         10 |          6 |          2 |         18 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\package-lock.json                                                       | JSON               |     21,648 |          0 |          1 |     21,649 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\package.json                                                            | JSON               |         41 |          0 |          1 |         42 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\src\navigation\index.tsx                                                | TypeScript JSX     |         21 |          0 |          4 |         25 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\src\screens\Discover\index.tsx                                          | TypeScript JSX     |         11 |          0 |          4 |         15 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\src\screens\Favorite\index.tsx                                          | TypeScript JSX     |         11 |          0 |          4 |         15 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\src\screens\Profile\index.tsx                                           | TypeScript JSX     |         11 |          0 |          4 |         15 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\src\screens\Search\index.tsx                                            | TypeScript JSX     |         11 |          0 |          4 |         15 |
+| c:\Users\memme\Desktop\code-academy\final-project\rentacarMobile\tsconfig.json                                                           | JSON with Comments |          3 |          0 |          1 |          4 |
+| Total                                                                                                                                    |                    |     22,368 |        188 |        164 |     22,720 |
++------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
