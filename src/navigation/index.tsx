@@ -13,7 +13,12 @@ const Tab = createBottomTabNavigator();
 
 const Index = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={({route}) => ({
+        tabBarStyle: {
+          backgroundColor: '#16161A',
+        },
+      })}>
       <Tab.Screen
         name="DiscoverStack"
         component={DiscoverStack}
@@ -22,15 +27,15 @@ const Index = () => {
         })}
       />
       <Tab.Screen
-        name="SearcScreen"
-        component={SearchScreen}
+        name="FavoriteScreen"
+        component={FavoriteScreen}
         options={({route}) => ({
           tabBarIcon: ({color}) => <Icon name="home" size={26} color="black" />,
         })}
       />
       <Tab.Screen
-        name="FavoriteScreen"
-        component={FavoriteScreen}
+        name="SearcScreen"
+        component={SearchScreen}
         options={({route}) => ({
           tabBarIcon: ({color}) => <Icon name="home" size={26} color="black" />,
         })}
