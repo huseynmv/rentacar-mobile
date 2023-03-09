@@ -2,7 +2,12 @@ import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const CarCard = () => {
+interface CardProps {
+  id: string;
+  name: string;
+}
+
+const CarCard = ({id, name}: CardProps) => {
   return (
     <>
       <View style={styles.container}>
@@ -16,8 +21,9 @@ const CarCard = () => {
             />
           </View>
           <Text style={{fontSize: 24, fontWeight: '500', paddingLeft: 20}}>
-            AYGO
+            {name}
           </Text>
+          {/* <Text>{id}</Text> */}
           <View
             style={{
               flexDirection: 'row',
@@ -87,13 +93,13 @@ export default CarCard;
 
 const styles = StyleSheet.create({
   container: {
-    // height: 257,
-    // backgroundColor: '#E5E5E5',
-    // paddingR
+    // paddingVertical: 20,
     borderRadius: 20,
     borderWidth: 1,
     borderColor: 'red',
     marginHorizontal: 20,
+    marginVertical: 10,
+    // marginTop: 10,
   },
   img: {
     width: 300,

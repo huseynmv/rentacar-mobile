@@ -7,6 +7,7 @@ import FavoriteScreen from '../screens/Favorite';
 import ProfileScreen from '../screens/Profile';
 import SearchScreen from '../screens/Search';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import DiscoverStack from './stack/DiscoverStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,8 +15,8 @@ const Index = () => {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="DiscoverScreen"
-        component={DiscoverScreen}
+        name="DiscoverStack"
+        component={DiscoverStack}
         options={({route}) => ({
           tabBarIcon: ({color}) => <Icon name="home" size={26} color="black" />,
         })}
