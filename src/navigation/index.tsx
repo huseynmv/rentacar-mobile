@@ -8,6 +8,13 @@ import ProfileScreen from '../screens/Profile';
 import SearchScreen from '../screens/Search';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import DiscoverStack from './stack/DiscoverStack';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {
+  faCompass,
+  faBookmark,
+  faSearch,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +31,7 @@ const Index = () => {
         component={DiscoverStack}
         options={({route}) => ({
           tabBarIcon: ({color}) => (
-            <Icon name="star-o" size={26} color="white" />
+            <FontAwesomeIcon icon={faCompass} color={color} size={22} />
           ),
         })}
       />
@@ -32,21 +39,27 @@ const Index = () => {
         name="FavoriteScreen"
         component={FavoriteScreen}
         options={({route}) => ({
-          tabBarIcon: ({color}) => <Icon name="home" size={26} color="black" />,
+          tabBarIcon: ({color}) => (
+            <FontAwesomeIcon icon={faBookmark} color={color} size={22} />
+          ),
         })}
       />
       <Tab.Screen
         name="SearcScreen"
         component={SearchScreen}
         options={({route}) => ({
-          tabBarIcon: ({color}) => <Icon name="home" size={26} color="black" />,
+          tabBarIcon: ({color}) => (
+            <FontAwesomeIcon icon={faSearch} color={color} size={22} />
+          ),
         })}
       />
       <Tab.Screen
         name="ProfileScreen"
         component={ProfileScreen}
         options={({route}) => ({
-          tabBarIcon: ({color}) => <Icon name="home" size={26} color="black" />,
+          tabBarIcon: ({color}) => (
+            <FontAwesomeIcon icon={faUser} color={color} size={22} />
+          ),
         })}
       />
     </Tab.Navigator>
