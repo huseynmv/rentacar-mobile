@@ -1,6 +1,13 @@
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {
+  faCheck,
+  faGear,
+  faPersonShelter,
+  faDoorOpen,
+  faSun,
+} from '@fortawesome/free-solid-svg-icons';
 
 interface CardProps {
   id: string;
@@ -26,6 +33,7 @@ const CarCard = ({id, name}: CardProps) => {
               fontWeight: '600',
               paddingLeft: 20,
               fontFamily: 'inter',
+              marginVertical: 10,
             }}>
             {name}
           </Text>
@@ -33,44 +41,64 @@ const CarCard = ({id, name}: CardProps) => {
           <View
             style={{
               flexDirection: 'row',
-              paddingLeft: 20,
+              paddingHorizontal: 20,
               alignItems: 'center',
+              marginBottom: 10,
             }}>
             <View
               style={{
                 flexDirection: 'row',
+                // paddingHorizontal: 10,
                 // justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Icon name="home" size={24} />
-              <Text style={{fontSize: 16, fontWeight: '400'}}>A/T</Text>
+              <FontAwesomeIcon icon={faGear} size={20} color="gray" />
+              <Text
+                style={{fontSize: 16, fontWeight: '400', paddingHorizontal: 5}}>
+                A/T
+              </Text>
             </View>
             <View
               style={{
                 flexDirection: 'row',
                 // justifyContent: 'center',
+                paddingHorizontal: 10,
+
                 alignItems: 'center',
               }}>
-              <Icon name="home" size={24} />
-              <Text style={{fontSize: 16, fontWeight: '400'}}>5</Text>
+              <FontAwesomeIcon icon={faPersonShelter} size={20} color="gray" />
+              <Text
+                style={{fontSize: 16, fontWeight: '400', paddingHorizontal: 5}}>
+                5
+              </Text>
             </View>
             <View
               style={{
                 flexDirection: 'row',
                 // justifyContent: 'center',
+                paddingHorizontal: 10,
+
                 alignItems: 'center',
               }}>
-              <Icon name="home" size={24} />
-              <Text style={{fontSize: 16, fontWeight: '400'}}>4</Text>
+              <FontAwesomeIcon icon={faDoorOpen} size={20} color="gray" />
+              <Text
+                style={{fontSize: 16, fontWeight: '400', paddingHorizontal: 5}}>
+                4
+              </Text>
             </View>
             <View
               style={{
                 flexDirection: 'row',
                 // justifyContent: 'center',
+                paddingHorizontal: 10,
+
                 alignItems: 'center',
               }}>
-              <Icon name="home" size={24} />
-              <Text style={{fontSize: 16, fontWeight: '400'}}>A/C</Text>
+              <FontAwesomeIcon icon={faSun} size={20} color="gray" />
+              <Text
+                style={{fontSize: 16, fontWeight: '400', paddingHorizontal: 5}}>
+                A/C
+              </Text>
             </View>
           </View>
           <View
@@ -79,16 +107,24 @@ const CarCard = ({id, name}: CardProps) => {
               backgroundColor: '#EAECF0',
               borderBottomLeftRadius: 20,
               borderBottomRightRadius: 20,
+              paddingVertical: 10,
             }}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Icon name="home" size={24} />
-              <Text style={{fontSize: 14, fontWeight: '400'}}>
+              <FontAwesomeIcon icon={faCheck} size={20} color="#2CB67D" />
+              <Text
+                style={{fontSize: 14, fontWeight: '400', paddingHorizontal: 5}}>
                 Instant confirmation
               </Text>
             </View>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Icon name="home" size={24} />
-              <Text style={{fontSize: 14, fontWeight: '400'}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingTop: 5,
+              }}>
+              <FontAwesomeIcon icon={faCheck} size={20} color="#2CB67D" />
+              <Text
+                style={{fontSize: 14, fontWeight: '400', paddingHorizontal: 5}}>
                 Free cancellation
               </Text>
             </View>
