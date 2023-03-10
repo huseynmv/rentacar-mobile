@@ -20,7 +20,13 @@ const CarCard = ({id, name}: CardProps) => {
               }}
             />
           </View>
-          <Text style={{fontSize: 24, fontWeight: '500', paddingLeft: 20}}>
+          <Text
+            style={{
+              fontSize: 22,
+              fontWeight: '600',
+              paddingLeft: 20,
+              fontFamily: 'inter',
+            }}>
             {name}
           </Text>
           {/* <Text>{id}</Text> */}
@@ -37,7 +43,7 @@ const CarCard = ({id, name}: CardProps) => {
                 alignItems: 'center',
               }}>
               <Icon name="home" size={24} />
-              <Text>A/T</Text>
+              <Text style={{fontSize: 16, fontWeight: '400'}}>A/T</Text>
             </View>
             <View
               style={{
@@ -46,7 +52,7 @@ const CarCard = ({id, name}: CardProps) => {
                 alignItems: 'center',
               }}>
               <Icon name="home" size={24} />
-              <Text>5</Text>
+              <Text style={{fontSize: 16, fontWeight: '400'}}>5</Text>
             </View>
             <View
               style={{
@@ -55,7 +61,7 @@ const CarCard = ({id, name}: CardProps) => {
                 alignItems: 'center',
               }}>
               <Icon name="home" size={24} />
-              <Text>4</Text>
+              <Text style={{fontSize: 16, fontWeight: '400'}}>4</Text>
             </View>
             <View
               style={{
@@ -64,23 +70,27 @@ const CarCard = ({id, name}: CardProps) => {
                 alignItems: 'center',
               }}>
               <Icon name="home" size={24} />
-              <Text>A/C</Text>
+              <Text style={{fontSize: 16, fontWeight: '400'}}>A/C</Text>
             </View>
           </View>
           <View
             style={{
               paddingLeft: 20,
-              backgroundColor: 'gray',
+              backgroundColor: '#EAECF0',
               borderBottomLeftRadius: 20,
               borderBottomRightRadius: 20,
             }}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Icon name="home" size={24} />
-              <Text>Instant confirmation</Text>
+              <Text style={{fontSize: 14, fontWeight: '400'}}>
+                Instant confirmation
+              </Text>
             </View>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Icon name="home" size={24} />
-              <Text>Free cancellation</Text>
+              <Text style={{fontSize: 14, fontWeight: '400'}}>
+                Free cancellation
+              </Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -94,19 +104,23 @@ export default CarCard;
 const styles = StyleSheet.create({
   container: {
     // paddingVertical: 20,
-    borderRadius: 20,
-    borderWidth: 1,
-    borderColor: 'red',
     marginHorizontal: 20,
     marginVertical: 10,
     // marginTop: 10,
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: '#E2E2E2',
+    // backgroundColor: 'red',
   },
   img: {
     width: 300,
     height: 150,
   },
   imgContainer: {
+    borderRadius: 20,
+
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#F5F6F8',
   },
 });
