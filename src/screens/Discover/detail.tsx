@@ -12,9 +12,9 @@ const Detail = () => {
             alignItems: 'center',
             padding: 20,
           }}>
-          <Text>AYGO</Text>
+          <Text style={{fontSize: 20, fontWeight: '500'}}>AYGO</Text>
           <TouchableOpacity>
-            <Text>Favs</Text>
+            <Text style={{fontSize: 20, fontWeight: '500'}}>Favs</Text>
           </TouchableOpacity>
         </View>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
@@ -30,12 +30,15 @@ const Detail = () => {
         </View>
       </View>
       <View style={{flex: 1}}>
-        <Text>Specifications</Text>
+        <Text style={{padding: 20, fontSize: 16, fontWeight: '500'}}>
+          Specifications
+        </Text>
         <View
           style={{
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
+            paddingHorizontal: 20,
           }}>
           <View
             style={{
@@ -43,6 +46,8 @@ const Detail = () => {
               borderRadius: 20,
               borderColor: 'red',
               padding: 10,
+              marginRight: 5,
+              borderStartColor: '#94A1B2',
             }}>
             <Text style={{marginBottom: 5}}>Icon</Text>
             <Text>Max Power</Text>
@@ -54,6 +59,8 @@ const Detail = () => {
               borderRadius: 20,
               borderColor: 'red',
               padding: 10,
+              marginRight: 5,
+              borderLeftColor: '#94A1B2',
             }}>
             <Text style={{marginBottom: 5}}>Icon</Text>
             <Text>Max Power</Text>
@@ -65,6 +72,8 @@ const Detail = () => {
               borderRadius: 20,
               borderColor: 'red',
               padding: 10,
+              marginRight: 5,
+              borderStartColor: '#94A1B2',
             }}>
             <Text style={{marginBottom: 5}}>Icon</Text>
             <Text>Max Power</Text>
@@ -76,13 +85,17 @@ const Detail = () => {
               borderRadius: 20,
               borderColor: 'red',
               padding: 10,
+              marginRight: 5,
+              borderStartColor: '#94A1B2',
             }}>
             <Text style={{marginBottom: 5}}>Icon</Text>
             <Text>Max Power</Text>
             <Text>320 hp</Text>
           </View>
         </View>
-        <Text>Car Features</Text>
+        <Text style={{padding: 20, fontSize: 16, fontWeight: '500'}}>
+          Car Features
+        </Text>
         <View
           style={{
             flexDirection: 'row',
@@ -90,31 +103,92 @@ const Detail = () => {
             alignItems: 'center',
           }}>
           <View>
-            <Text>2 Passengers</Text>
-            <Text>Show tires</Text>
-            <Text>Bluetooth</Text>
+            <Text
+              style={{
+                paddingHorizontal: 20,
+                paddingVertical: 5,
+                fontSize: 16,
+                fontWeight: '400',
+              }}>
+              2 Passengers
+            </Text>
+            <Text
+              style={{
+                paddingHorizontal: 20,
+                paddingVertical: 5,
+                fontSize: 16,
+                fontWeight: '400',
+              }}>
+              Show tires
+            </Text>
+            <Text
+              style={{
+                paddingHorizontal: 20,
+                paddingVertical: 5,
+                fontSize: 16,
+                fontWeight: '400',
+              }}>
+              Bluetooth
+            </Text>
           </View>
           <View>
-            <Text>2 Passengers</Text>
-            <Text>Show tires</Text>
-            <Text>Bluetooth</Text>
+            <Text
+              style={{
+                paddingHorizontal: 20,
+                paddingVertical: 5,
+                fontSize: 16,
+                fontWeight: '400',
+              }}>
+              2 Passengers
+            </Text>
+            <Text
+              style={{
+                paddingHorizontal: 20,
+                paddingVertical: 5,
+                fontSize: 16,
+                fontWeight: '400',
+              }}>
+              Show tires
+            </Text>
+            <Text
+              style={{
+                paddingHorizontal: 20,
+                paddingVertical: 5,
+                fontSize: 16,
+                fontWeight: '400',
+              }}>
+              Bluetooth
+            </Text>
           </View>
         </View>
       </View>
       <View
         style={{
-          backgroundColor: 'green',
+          backgroundColor: '#16161A',
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
         }}>
-        <View>
-          <Text>Price</Text>
-          <Text>$250 / Day</Text>
+        <View style={{padding: 20}}>
+          <Text style={{fontSize: 16, fontWeight: '500', color: '#94A1B2'}}>
+            Price
+          </Text>
+          <Text style={{fontSize: 16, fontWeight: '500', color: '#ffffff'}}>
+            $250 / Day
+          </Text>
         </View>
-        <View>
-          <TouchableOpacity>
-            <Text>Book Now</Text>
+        <View style={{marginRight: 20}}>
+          <TouchableOpacity
+            style={{backgroundColor: '#2CB67D', borderRadius: 20}}>
+            <Text
+              style={{
+                padding: 20,
+                fontSize: 16,
+                fontWeight: '500',
+                color: '#ffffff',
+              }}>
+              Book Now
+            </Text>
           </TouchableOpacity>
         </View>
       </View>

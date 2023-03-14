@@ -12,8 +12,8 @@ const DiscoverStack = () => {
         headerShown: false,
         animation: 'slide_from_right',
       }}>
-      <Stack.Screen name="DiscoverScreen" component={DiscoverScreen} />
       <Stack.Screen name="DiscoverDetail" component={DiscoverDetail} />
+      <Stack.Screen name="DiscoverScreen" component={DiscoverScreen} />
     </Stack.Navigator>
   );
 };
