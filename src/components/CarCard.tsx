@@ -12,13 +12,14 @@ import {
 interface CardProps {
   id: string;
   name: string;
+  navigateTo: any;
 }
 
-const CarCard = ({id, name}: CardProps) => {
+const CarCard = ({id, name, navigateTo}: CardProps) => {
   return (
     <>
       <View style={styles.container}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigateTo.navigate('DiscoverDetail')}>
           <View style={styles.imgContainer}>
             <Image
               style={styles.img}
