@@ -1,7 +1,17 @@
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React, {Fragment} from 'react';
+import {faBookmark, faBookBookmark} from '@fortawesome/free-solid-svg-icons';
+import {Icon} from 'react-native-vector-icons/Icon';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {useDispatch} from 'react-redux';
+import {addFavorite} from '../../features/favoriteSlice';
 
-const Detail = () => {
+const Detail = ({route}: any) => {
+  let id = route.params;
+  console.log(id);
+
+  const dispatch = useDispatch();
+
   return (
     <View style={{flex: 2}}>
       <View style={{flex: 1, justifyContent: 'center'}}>
@@ -13,8 +23,8 @@ const Detail = () => {
             padding: 20,
           }}>
           <Text style={{fontSize: 20, fontWeight: '500'}}>AYGO</Text>
-          <TouchableOpacity>
-            <Text style={{fontSize: 20, fontWeight: '500'}}>Favs</Text>
+          <TouchableOpacity onPress={() => dispatch(addFavorite(id))}>
+            <FontAwesomeIcon icon={faBookmark} size={20} />
           </TouchableOpacity>
         </View>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>

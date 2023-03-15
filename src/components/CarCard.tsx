@@ -13,13 +13,15 @@ interface CardProps {
   id: string;
   name: string;
   navigateTo: any;
+  item: any;
 }
 
-const CarCard = ({id, name, navigateTo}: CardProps) => {
+const CarCard = ({id, name, navigateTo, item}: CardProps) => {
   return (
     <>
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => navigateTo.navigate('DiscoverDetail')}>
+        <TouchableOpacity
+          onPress={() => navigateTo.navigate('DiscoverDetail', {id: item.id})}>
           <View style={styles.imgContainer}>
             <Image
               style={styles.img}
