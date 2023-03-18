@@ -5,9 +5,8 @@ import {Provider, useSelector} from 'react-redux';
 import Onboarding from 'react-native-onboarding-swiper';
 import Tab from './src/navigation';
 import {store} from './src/features';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+
 const App = () => {
-  // console.log(AsyncStorage.getItem('favorites'));
   const [isOnboarding, setisOnboarding] = useState<boolean>(true);
 
   return (
@@ -18,22 +17,32 @@ const App = () => {
           onSkip={() => setisOnboarding(false)}
           pages={[
             {
-              backgroundColor: 'red',
-              title: 'salam',
-              subtitle: 'salam subtiitle',
-              image: <Image source={require('./src/assets/car.png')} />,
+              backgroundColor: '#E5E5E5',
+              title: 'Expecto Patronum',
+              subtitle:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
+              image: <Image source={require('./src/assets/onboarding1.png')} />,
             },
             {
-              backgroundColor: 'red',
-              title: 'salam2',
-              subtitle: 'salam subtiitle',
-              image: <Image source={require('./src/assets/car.png')} />,
+              backgroundColor: '#E5E5E5',
+              title: 'We dont need bike',
+              subtitle: `Lorem ipsum dolor sit amet, consectetur 
+adipiscing elit, sed do eiusmod`,
+              image: <Image source={require('./src/assets/onboarding2.png')} />,
             },
             {
-              backgroundColor: 'red',
-              title: 'salam3',
-              subtitle: 'salam subtiitle',
-              image: <Image source={require('./src/assets/car.png')} />,
+              backgroundColor: '#E5E5E5',
+              title: 'Start your adventure',
+              subtitle:
+                'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, corrupti facere!',
+              image: <Image source={require('./src/assets/onboarding3.png')} />,
+            },
+            {
+              backgroundColor: '#E5E5E5',
+              title: 'Welcome to Iqrv',
+              subtitle: `Lorem ipsum dolor sit amet, consectetur 
+adipiscing elit, sed do eiusmod `,
+              image: <Image source={require('./src/assets/onboarding4.png')} />,
             },
           ]}
         />
