@@ -21,7 +21,7 @@ const CarCard = ({id, name, navigateTo, item}: CardProps) => {
     <>
       <View style={styles.container}>
         <TouchableOpacity
-          onPress={() => navigateTo.navigate('DiscoverDetail', {id: item.id})}>
+          onPress={() => navigateTo.navigate('DiscoverDetail', {id: item._id})}>
           <View style={styles.imgContainer}>
             <Image
               style={styles.img}

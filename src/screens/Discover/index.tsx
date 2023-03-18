@@ -16,7 +16,7 @@ const Index = ({navigation}: any) => {
       <>
         <CarCard
           name={item.name}
-          id={item.id}
+          id={item._id}
           navigateTo={navigation}
           item={item}
         />
