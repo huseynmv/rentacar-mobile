@@ -14,12 +14,7 @@ const Index = ({navigation}: any) => {
   const renderItem = ({item}: any) => {
     return (
       <>
-        <CarCard
-          name={item.name}
-          id={item._id}
-          navigateTo={navigation}
-          item={item}
-        />
+        <CarCard navigateTo={navigation} item={item} />
       </>
     );
   };

@@ -10,13 +10,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 interface CardProps {
-  id: string;
-  name: string;
   navigateTo: any;
   item: any;
 }
 
-const CarCard = ({id, name, navigateTo, item}: CardProps) => {
+const CarCard = ({navigateTo, item}: CardProps) => {
   return (
     <>
       <View style={styles.container}>
@@ -38,7 +36,7 @@ const CarCard = ({id, name, navigateTo, item}: CardProps) => {
               fontFamily: 'inter',
               marginVertical: 10,
             }}>
-            {name}
+            {item.name}
           </Text>
           {/* <Text>{id}</Text> */}
           <View

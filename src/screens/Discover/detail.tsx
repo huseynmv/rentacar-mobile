@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React, {Fragment, useEffect, useState} from 'react';
 import {faBookmark, faBookBookmark} from '@fortawesome/free-solid-svg-icons';
-import {Icon} from 'react-native-vector-icons/Icon';
+// import {Icon} from 'react-native-vector-icons/Icon';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {useDispatch} from 'react-redux';
 import {addFavorite} from '../../features/favoriteSlice';
@@ -19,7 +19,7 @@ const Detail = ({route}: any) => {
   const [carData, setcarData] = useState<any>();
   let id = route.params;
   useEffect(() => {
-    fetch(`https://rent-a-car-api.onrender.com/api/car/${id}`)
+    fetch(`https://rent-a-car-api.onrender.com/api/car/${id.id}/`)
       .then(res => res.json())
       .then(data => {
         setcarData(data);
@@ -36,7 +36,7 @@ const Detail = ({route}: any) => {
     <>
       {loading ? (
         <View style={{flex: 1}}>
-          <DotIndicator color="2CB67D" />
+          <DotIndicator size={24} color="2CB67D" />
         </View>
       ) : (
         <View style={{flex: 2}}>

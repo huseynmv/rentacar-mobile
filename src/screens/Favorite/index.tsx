@@ -1,23 +1,31 @@
 import {StyleSheet, Text, View, FlatList} from 'react-native';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
+import CarCard from '../../components/CarCard';
 
-const Index = () => {
+const Index = ({navigation}: any) => {
   const dispatch = useDispatch();
   const favorites: any = useSelector<any>(state => state.favorite.favorites);
-  console.log(favorites);
+  console.log(favorites, '--------------');
+
+  const [carData, setcarData] = useState<any>();
+  useEffect(() => {
+    fetch(`https://rent-a-car-api.onrender.com/api/car/${favorites.id}`)
+      .then(res => res.json())
+      .then(data => setcarData(data));
+  }, []);
 
   const renderitem = ({item}: any) => {
     return (
       <>
-        <Text>{item.id}</Text>
+        <CarCard navigateTo={navigation} item={item} />
       </>
     );
   };
 
   return (
     <>
-      <FlatList renderItem={renderitem} data={favorites} />
+      <FlatList renderItem={renderitem} data={carData} />
     </>
   );
 };
