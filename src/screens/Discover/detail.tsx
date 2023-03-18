@@ -12,26 +12,14 @@ import {Icon} from 'react-native-vector-icons/Icon';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {useDispatch} from 'react-redux';
 import {addFavorite} from '../../features/favoriteSlice';
-import {
-  BallIndicator,
-  BarIndicator,
-  DotIndicator,
-  MaterialIndicator,
-  PacmanIndicator,
-  PulseIndicator,
-  SkypeIndicator,
-  UIActivityIndicator,
-  WaveIndicator,
-} from 'react-native-indicators';
+import {DotIndicator} from 'react-native-indicators';
 
 const Detail = ({route}: any) => {
   const [loading, setloading] = useState<any>(true);
   const [carData, setcarData] = useState<any>();
   let id = route.params;
   useEffect(() => {
-    fetch(
-      'https://rent-a-car-api.onrender.com/api/car/64142672ae49fa6e384b842a',
-    )
+    fetch(`https://rent-a-car-api.onrender.com/api/car/${id}`)
       .then(res => res.json())
       .then(data => {
         setcarData(data);
@@ -101,7 +89,7 @@ const Detail = ({route}: any) => {
                 }}>
                 <Text style={{marginBottom: 5}}>Icon</Text>
                 <Text>Max Power</Text>
-                <Text>320 hp</Text>
+                <Text>{carData.maxPower}</Text>
               </View>
               <View
                 style={{
@@ -160,7 +148,7 @@ const Detail = ({route}: any) => {
                     fontSize: 16,
                     fontWeight: '400',
                   }}>
-                  2 Passengers
+                  {carData.passengerCount} Passengers
                 </Text>
                 <Text
                   style={{
@@ -224,7 +212,7 @@ const Detail = ({route}: any) => {
                 Price
               </Text>
               <Text style={{fontSize: 16, fontWeight: '500', color: '#ffffff'}}>
-                $250 / Day
+                {carData.price} / Day
               </Text>
             </View>
             <View style={{marginRight: 20}}>
