@@ -7,8 +7,9 @@ import {
   FlatList,
 } from 'react-native';
 import React, {useState} from 'react';
+import CarCard from '../../components/CarCard';
 
-const Index = () => {
+const Index = ({navigation}: any) => {
   const [searchText, setsearchText] = useState<string>('');
   const [data, setdata] = useState<any>();
   const [isLoading, setisLoading] = useState<boolean>(true);
@@ -25,7 +26,7 @@ const Index = () => {
   const renderitem = ({item}: any) => {
     return (
       <>
-        <Text>{item.name}</Text>
+        <CarCard item={item} navigateTo={navigation} />
       </>
     );
   };

@@ -5,12 +5,15 @@ import {Provider, useSelector} from 'react-redux';
 import Onboarding from 'react-native-onboarding-swiper';
 import Tab from './src/navigation';
 import {store} from './src/features';
+import Login from './src/components/Login';
 
 const App = () => {
   const [isOnboarding, setisOnboarding] = useState<boolean>(true);
+  const [isAuthenticated, setisAuthenticated] = useState<boolean>(false);
 
   return (
     <>
+      <Login />
       {isOnboarding ? (
         <Onboarding
           onDone={() => setisOnboarding(false)}
