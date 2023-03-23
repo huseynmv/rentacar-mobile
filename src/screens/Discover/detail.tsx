@@ -19,7 +19,7 @@ const Detail = ({route}: any) => {
   const [carData, setcarData] = useState<any>();
   let id = route.params;
   useEffect(() => {
-    fetch(`https://rent-a-car-api.onrender.com/api/car/${id.id}/`)
+    fetch(`https://rent-car-api.onrender.com/api/car/${id.id}/`)
       .then(res => res.json())
       .then(data => {
         setcarData(data);

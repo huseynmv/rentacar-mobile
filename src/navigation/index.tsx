@@ -15,6 +15,7 @@ import {
   faSearch,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
+import AuthStack from './stack/AuthStack';
 
 const Tab = createBottomTabNavigator();
 

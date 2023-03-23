@@ -5,13 +5,14 @@ import {
   Image,
   DrawerLayoutAndroidComponent,
 } from 'react-native';
+import Navigation from './src/navigation/stack/AuthStack';
 import React, {useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {Provider, useSelector} from 'react-redux';
 import Onboarding from 'react-native-onboarding-swiper';
 import Tab from './src/navigation';
 import {store} from './src/features';
-import Login from './src/components/Login';
+import AuthStack from './src/navigation/stack/AuthStack';
 
 const App = () => {
   const [isOnboarding, setisOnboarding] = useState<boolean>(true);
@@ -69,15 +70,11 @@ adipiscing elit, sed do eiusmod `,
         </>
       ) : (
         <>
-          {isAuthenticated ? (
-            <Login />
-          ) : (
-            <Provider store={store}>
-              <NavigationContainer>
-                <Tab />
-              </NavigationContainer>
-            </Provider>
-          )}
+          <Provider store={store}>
+            <NavigationContainer>
+              <Navigation />
+            </NavigationContainer>
+          </Provider>
         </>
       )}
     </>

@@ -6,7 +6,7 @@ import CarCard from '../../components/CarCard';
 const Index = ({navigation}: any) => {
   const [carData, setCardata] = useState<any>();
   useEffect(() => {
-    fetch('https://rent-a-car-api.onrender.com/api/car')
+    fetch('https://rent-car-api.onrender.com/api/car')
       .then(res => res.json())
       .then(data => setCardata(data));
   }, []);
@@ -21,7 +21,12 @@ const Index = ({navigation}: any) => {
 
   return (
     <>
-      <FlatList renderItem={renderItem} data={carData} />
+      <FlatList
+        renderItem={renderItem}
+        keyExtractor={carData && carData.id}
+        data={carData}
+        key={carData && carData.id}
+      />
     </>
   );
 };
