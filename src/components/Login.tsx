@@ -6,7 +6,7 @@ const Login = () => {
   const confirmLogin = () => {
     fetch('https://rent-a-car-api.onrender.com/api/auth/login', {
       method: 'POST',
-      body: JSON.stringify({email: 'mammadovhuseyn37@gmail.com'}),
+      body: JSON.stringify({email: ''}),
     })
       .then(res => res.json())
       .then(data => console.log(data));
