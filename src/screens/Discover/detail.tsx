@@ -6,17 +6,22 @@ import {
   Image,
   ActivityIndicator,
 } from 'react-native';
-import React, {Fragment, useEffect, useState} from 'react';
+import React, {Fragment, useEffect, useState, useLayoutEffect} from 'react';
 import {faBookmark, faBookBookmark} from '@fortawesome/free-solid-svg-icons';
 // import {Icon} from 'react-native-vector-icons/Icon';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {useDispatch} from 'react-redux';
 import {addFavorite} from '../../features/favoriteSlice';
 import {DotIndicator} from 'react-native-indicators';
+import {
+  getFocusedRouteNameFromRoute,
+  useNavigation,
+} from '@react-navigation/native';
 
 const Detail = ({route}: any) => {
   const [loading, setloading] = useState<any>(true);
   const [carData, setcarData] = useState<any>();
+  const navigation = useNavigation();
   let id = route.params;
   useEffect(() => {
     fetch(`https://rent-car-api.onrender.com/api/car/${id.id}/`)
@@ -26,9 +31,6 @@ const Detail = ({route}: any) => {
         setloading(false);
       });
   }, []);
-
-  console.log(id);
-  console.log(carData);
 
   const dispatch = useDispatch();
 

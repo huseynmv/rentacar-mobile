@@ -24,6 +24,7 @@ const Index = () => {
     <Tab.Navigator
       screenOptions={({route}) => ({
         tabBarStyle: {
+          display: 'flex',
           backgroundColor: '#16161A',
         },
       })}>
