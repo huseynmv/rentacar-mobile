@@ -4,7 +4,7 @@ import React from 'react';
 const Register = ({navigation}: any) => {
   return (
     <View>
-      <Button title="main" onPress={() => navigation.navigate('MyTabs')} />
+      <Button title="main" onPress={() => navigation.navigate('ConfirmCode')} />
     </View>
   );
 };

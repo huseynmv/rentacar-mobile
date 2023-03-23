@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from '../../screens/Login';
 import Register from '../../screens/Register';
 import Index from '../../navigation';
+import ConfirmCode from '../../screens/ConfirmCode';
 
 const Stack = createNativeStackNavigator();
 const AuthStack = () => {
@@ -14,7 +15,9 @@ const AuthStack = () => {
         animation: 'slide_from_right',
       }}>
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="ConfirmCode" component={ConfirmCode} />
       <Stack.Screen name="Register" component={Register} />
+
       <Stack.Screen name="MyTabs" component={Index} />
     </Stack.Navigator>
   );

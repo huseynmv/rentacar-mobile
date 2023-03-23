@@ -10,9 +10,10 @@ const Index = ({navigation}: any) => {
 
   const [carData, setcarData] = useState<any>();
   useEffect(() => {
-    fetch(`https://rent-a-car-api.onrender.com/api/car/${favorites.id}`)
+    fetch(`https://rent-car-api.onrender.com/api/car/${favorites.id}`)
       .then(res => res.json())
-      .then(data => setcarData(data));
+      .then(data => setcarData(data))
+      .then(dataa => console.log(carData));
   }, []);
 
   const renderitem = ({item}: any) => {

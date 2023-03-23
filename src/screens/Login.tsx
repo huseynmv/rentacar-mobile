@@ -1,11 +1,18 @@
-import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
+import {
+  Button,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useNavigation} from '@react-navigation/native';
 
 const Login = ({navigation}: any) => {
   const confirmLogin = () => {
-    navigation.navigate('Register');
+    navigation.navigate('ConfirmCode');
     console.log(navigation);
   };
   return (
@@ -30,6 +37,9 @@ const Login = ({navigation}: any) => {
         />
         <Button title="Login" onPress={() => confirmLogin()} />
       </View>
+      <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+        <Text>Register</Text>
+      </TouchableOpacity>
     </View>
   );
 };
