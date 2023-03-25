@@ -6,14 +6,20 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-import React from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import {useNavigation} from '@react-navigation/native';
+import React, {useState} from 'react';
+import axios from 'axios';
 
 const Login = ({navigation}: any) => {
+  const [Useremail, setUseremail] = useState('');
+
   const confirmLogin = () => {
-    navigation.navigate('ConfirmCode');
-    console.log(navigation);
+    console.log(Useremail);
+
+    axios
+      .post('https://rent-car-api.onrender.com/api/auth/login', {
+        email: Useremail,
+      })
+      .then(data => console.log(data));
   };
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
@@ -34,6 +40,7 @@ const Login = ({navigation}: any) => {
         <TextInput
           style={{height: 50, width: 200, borderRadius: 12, borderWidth: 1}}
           placeholder="Email"
+          onChangeText={setUseremail}
         />
         <Button title="Login" onPress={() => confirmLogin()} />
       </View>

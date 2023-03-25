@@ -6,14 +6,16 @@ import CarCard from '../../components/CarCard';
 const Index = ({navigation}: any) => {
   const dispatch = useDispatch();
   const favorites: any = useSelector<any>(state => state.favorite.favorites);
-  console.log(favorites, '--------------');
+  console.log(favorites);
 
   const [carData, setcarData] = useState<any>();
   useEffect(() => {
-    fetch(`https://rent-car-api.onrender.com/api/car/${favorites.id}`)
+    fetch(`https://rent-car-api.onrender.com/api/car/${favorites[0].id}`)
       .then(res => res.json())
-      .then(data => setcarData(data))
-      .then(dataa => console.log(carData));
+      .then(data => {
+        setcarData(data);
+        console.log(carData);
+      });
   }, []);
 
   const renderitem = ({item}: any) => {
