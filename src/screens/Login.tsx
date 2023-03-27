@@ -19,7 +19,11 @@ const Login = ({navigation}: any) => {
       .post('https://rent-car-api.onrender.com/api/auth/login', {
         email: Useremail,
       })
-      .then(data => console.log(data));
+      .then(data => {
+        if (data.data.statusCode == 200) {
+          navigation.navigate('MyTabs');
+        }
+      });
   };
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
