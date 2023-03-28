@@ -4,42 +4,131 @@ import {
   View,
   TouchableOpacity,
   TextInput,
+  SafeAreaView,
 } from 'react-native';
 import React, {useState} from 'react';
 import axios from 'axios';
+import {
+  CodeField,
+  Cursor,
+  useBlurOnFulfill,
+  useClearByFocusCell,
+} from 'react-native-confirmation-code-field';
+import {MaterialIndicator} from 'react-native-indicators';
 
 const ConfirmCode = ({navigation, route}: any) => {
+  const CELL_COUNT = 6;
   let email = route.params;
-  const [code, setcode] = useState('');
-  console.log(email.email);
+
+  // CONFIRM INPUT
+
+  const [loading, setloading] = useState(false);
+
+  const [value, setValue] = useState('');
+
+  const [props, getCellOnLayoutHandler] = useClearByFocusCell({
+    value,
+    setValue,
+  });
+  console.log(value);
 
   const confirm = () => {
+    setloading(true);
     axios
       .post('https://rent-car-api.onrender.com/api/auth/confirmCode', {
         email: email.email,
-        confirmCode: Number(code),
+        confirmCode: Number(value),
       })
       .then(data => {
         console.log(data);
         navigation.navigate('MyTabs');
+        setloading(false);
       })
       .catch(err => console.log(err));
   };
 
   return (
-    <View>
-      <TextInput
-        style={{height: 50, width: 200, borderRadius: 12, borderWidth: 1}}
-        placeholder="Confirm code"
-        onChangeText={setcode}
+    <SafeAreaView style={styles.root}>
+      <Text style={styles.title}>Verification</Text>
+      <CodeField
+        {...props}
+        // Use `caretHidden={false}` when users can't paste a text value, because context menu doesn't appear
+        value={value}
+        onChangeText={setValue}
+        cellCount={CELL_COUNT}
+        rootStyle={styles.codeFieldRoot}
+        keyboardType="number-pad"
+        textContentType="oneTimeCode"
+        renderCell={({index, symbol, isFocused}) => (
+          <Text
+            key={index}
+            style={[styles.cell, isFocused && styles.focusCell]}
+            onLayout={getCellOnLayoutHandler(index)}>
+            {symbol || (isFocused ? <Cursor /> : null)}
+          </Text>
+        )}
       />
-      <TouchableOpacity onPress={() => confirm()}>
-        <Text>Confirm</Text>
-      </TouchableOpacity>
-    </View>
+      {loading ? (
+        <TouchableOpacity
+          onPress={() => confirm()}
+          style={{
+            width: '100%',
+            opacity: 0.7,
+            height: 45,
+            borderRadius: 10,
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: '#2CB67D',
+            // marginHorizontal: 20,
+            // paddingHorizontal: 10,
+            marginTop: 30,
+          }}>
+          <MaterialIndicator />
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity
+          onPress={() => confirm()}
+          style={{
+            width: '100%',
+            height: 45,
+            borderRadius: 10,
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: '#2CB67D',
+            // marginHorizontal: 20,
+            // paddingHorizontal: 10,
+            marginTop: 30,
+          }}>
+          <Text style={{color: '#FFF', fontSize: 20}}>Confirm Code</Text>
+        </TouchableOpacity>
+      )}
+    </SafeAreaView>
   );
 };
 
 export default ConfirmCode;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  root: {flex: 1, paddingHorizontal: 30, justifyContent: 'center'},
+  title: {
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: 32,
+  },
+  codeFieldRoot: {marginTop: 20},
+  cell: {
+    width: 40,
+    height: 40,
+    lineHeight: 38,
+    fontSize: 32,
+    borderWidth: 2,
+    borderColor: '#2CB67D',
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  focusCell: {
+    borderColor: '#000',
+  },
+});
