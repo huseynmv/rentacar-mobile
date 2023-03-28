@@ -30,7 +30,7 @@ const App = () => {
             onSkip={() => setisOnboarding(false)}
             pages={[
               {
-                backgroundColor: '#E5E5E5',
+                backgroundColor: '#16161A',
                 title: 'Expecto Patronum',
                 subtitle:
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
@@ -39,7 +39,7 @@ const App = () => {
                 ),
               },
               {
-                backgroundColor: '#E5E5E5',
+                backgroundColor: '#94A1B2',
                 title: 'We dont need bike',
                 subtitle: `Lorem ipsum dolor sit amet, consectetur 
 adipiscing elit, sed do eiusmod`,
@@ -48,7 +48,7 @@ adipiscing elit, sed do eiusmod`,
                 ),
               },
               {
-                backgroundColor: '#E5E5E5',
+                backgroundColor: '#2CB67D',
                 title: 'Start your adventure',
                 subtitle:
                   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, corrupti facere!',
