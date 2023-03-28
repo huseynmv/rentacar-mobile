@@ -24,7 +24,7 @@ const Login = ({navigation}: any) => {
       })
       .then(data => {
         if (data.data.statusCode == 200) {
-          navigation.navigate('MyTabs');
+          navigation.navigate('ConfirmCode');
           setloading(false);
         }
       });
