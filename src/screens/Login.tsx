@@ -24,7 +24,9 @@ const Login = ({navigation}: any) => {
       })
       .then(data => {
         if (data.data.statusCode == 200) {
-          navigation.navigate('ConfirmCode');
+          navigation.navigate('ConfirmCode', {
+            email: Useremail,
+          });
           setloading(false);
         }
       });
@@ -46,6 +48,7 @@ const Login = ({navigation}: any) => {
             width: '70%',
             height: 45,
             borderWidth: 2,
+            padding: 10,
 
             // marginLeft: 60,
             // marginRight: 60,

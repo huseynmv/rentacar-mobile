@@ -30,40 +30,37 @@ const App = () => {
             onSkip={() => setisOnboarding(false)}
             pages={[
               {
-                backgroundColor: '#16161A',
-                title: 'Expecto Patronum',
-                subtitle:
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
+                backgroundColor: '#F0CF69',
+                title: 'Your first car with a driver lisence',
+                subtitle: 'Meet poeple we jut got their driver lisence ',
                 image: (
-                  <Image source={require('./src/assets/onboarding1.png')} />
+                  <Image source={require('./src/assets/Onboarding_1.png')} />
                 ),
               },
               {
-                backgroundColor: '#94A1B2',
-                title: 'We dont need bike',
+                backgroundColor: '#B7ABFD',
+                title: 'Always there : more than 1000 cars',
                 subtitle: `Lorem ipsum dolor sit amet, consectetur 
 adipiscing elit, sed do eiusmod`,
                 image: (
-                  <Image source={require('./src/assets/onboarding2.png')} />
+                  <Image source={require('./src/assets/Onboarding_2.png')} />
                 ),
               },
               {
-                backgroundColor: '#2CB67D',
+                backgroundColor: '#EFB491',
                 title: 'Start your adventure',
                 subtitle:
                   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, corrupti facere!',
                 image: (
-                  <Image source={require('./src/assets/onboarding3.png')} />
+                  <Image source={require('./src/assets/Onboarding_3.png')} />
                 ),
               },
               {
-                backgroundColor: '#E5E5E5',
+                backgroundColor: '#95B6FF',
                 title: 'Welcome to Iqrv',
                 subtitle: `Lorem ipsum dolor sit amet, consectetur 
 adipiscing elit, sed do eiusmod `,
-                image: (
-                  <Image source={require('./src/assets/onboarding4.png')} />
-                ),
+                image: <Image source={require('./src/assets/Img_car4.png')} />,
               },
             ]}
           />
