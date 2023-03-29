@@ -5138,6 +5138,11 @@
   dependencies:
     "js-tokens" "^3.0.0 || ^4.0.0"
 
+"lottie-react-native@^6.0.0-rc.3":
+  "integrity" "sha512-vhKgsvY7qQMmEEXYR+VOqyTI9g2uz/GoUa+vmZ+9yj8exmLxp/yiwjcTnDrbbxLX0i7iuPwEfJSZ24okURf6xQ=="
+  "resolved" "https://registry.npmjs.org/lottie-react-native/-/lottie-react-native-6.0.0-rc.3.tgz"
+  "version" "6.0.0-rc.3"
+
 "lru-cache@^5.1.1":
   "integrity" "sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w=="
   "resolved" "https://registry.npmjs.org/lru-cache/-/lru-cache-5.1.1.tgz"
@@ -6353,7 +6358,7 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
-"react-native@*", "react-native@^0.0.0-0 || 0.60 - 0.71 || 1000.0.0", "react-native@>= 0.67", "react-native@>=0.59", "react-native@>=0.64.0", "react-native@0.71.3":
+"react-native@*", "react-native@^0.0.0-0 || 0.60 - 0.71 || 1000.0.0", "react-native@>= 0.67", "react-native@>=0.46", "react-native@>=0.59", "react-native@>=0.64.0", "react-native@0.71.3":
   "integrity" "sha512-RYJXCcQGa4NTfKiPgl92eRDUuQ6JGDnHqFEzRwJSqEx9lWvlvRRIebstJfurzPDKLQWQrvITR7aI7e09E25mLw=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.71.3.tgz"
   "version" "0.71.3"

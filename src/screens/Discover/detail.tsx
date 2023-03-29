@@ -18,10 +18,9 @@ import {
   useNavigation,
 } from '@react-navigation/native';
 
-const Detail = ({route}: any) => {
+const Detail = ({route, navigation}: any) => {
   const [loading, setloading] = useState<any>(true);
   const [carData, setcarData] = useState<any>();
-  const navigation = useNavigation();
   let id = route.params;
   useEffect(() => {
     fetch(`https://rent-car-api.onrender.com/api/car/${id.id}/`)
@@ -38,7 +37,7 @@ const Detail = ({route}: any) => {
     <>
       {loading ? (
         <View style={{flex: 1}}>
-          <DotIndicator size={24} color="2CB67D" />
+          <DotIndicator size={24} color="#2CB67D" />
         </View>
       ) : (
         <View style={{flex: 2}}>
@@ -219,6 +218,9 @@ const Detail = ({route}: any) => {
             </View>
             <View style={{marginRight: 20}}>
               <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('Confirm');
+                }}
                 style={{backgroundColor: '#2CB67D', borderRadius: 20}}>
                 <Text
                   style={{

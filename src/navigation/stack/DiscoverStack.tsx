@@ -3,6 +3,7 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import DiscoverScreen from '../../screens/Discover';
 import DiscoverDetail from '../../screens/Discover/detail';
+import Confirm from '../../screens/Discover/Confirm';
 const Stack = createNativeStackNavigator();
 
 const DiscoverStack = () => {
@@ -14,6 +15,7 @@ const DiscoverStack = () => {
       }}>
       <Stack.Screen name="DiscoverScreen" component={DiscoverScreen} />
       <Stack.Screen name="DiscoverDetail" component={DiscoverDetail} />
+      <Stack.Screen name="Confirm" component={Confirm} />
     </Stack.Navigator>
   );
 };
