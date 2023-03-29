@@ -37,29 +37,39 @@ const Index = ({navigation}: any) => {
   return (
     <>
       {isLoading ? (
-        <View
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            flexDirection: 'row',
-          }}>
-          <TextInput
-            onChangeText={setsearchText}
+        <>
+          <View
             style={{
-              height: 50,
-              width: '90%',
-              borderRadius: 30,
-              margin: 12,
-              borderWidth: 1,
-              padding: 10,
-            }}
-          />
-          <View>
-            <TouchableOpacity onPress={() => getData()}>
-              <FontAwesomeIcon icon={faSearch} size={24} />
-            </TouchableOpacity>
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              flexDirection: 'row',
+              position: 'relative',
+              marginLeft: 10,
+            }}>
+            <TextInput
+              onChangeText={setsearchText}
+              style={{
+                height: 50,
+                width: '90%',
+                borderRadius: 30,
+                margin: 12,
+                borderWidth: 1,
+                paddingLeft: 20,
+                // marginLeft: 10,
+                // position: 'absolute',
+                // marginRight: 20,
+              }}
+            />
+            <View style={{position: 'absolute', right: 45}}>
+              <TouchableOpacity onPress={() => getData()}>
+                <FontAwesomeIcon icon={faSearch} size={24} />
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
+          <View style={{alignItems: 'center', marginTop: 100}}>
+            <Text style={{fontSize: 30, opacity: 0.5}}>Search cars here</Text>
+          </View>
+        </>
       ) : (
         <View>
           <FlatList data={data} renderItem={renderitem} />
