@@ -3,8 +3,9 @@ import React, {useEffect, useState} from 'react';
 import CarCard from '../../components/CarCard';
 // import data from '../../assets/data';
 
-const Index = ({navigation}: any) => {
+const Index = ({navigation, route}: any) => {
   const [carData, setCardata] = useState<any>();
+
   useEffect(() => {
     fetch('https://rent-car-api.onrender.com/api/car')
       .then(res => res.json())

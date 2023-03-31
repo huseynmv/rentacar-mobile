@@ -22,6 +22,8 @@ const Detail = ({route, navigation}: any) => {
   const [loading, setloading] = useState<any>(true);
   const [carData, setcarData] = useState<any>();
   let id = route.params;
+  let email = route.params.email.email;
+  console.log(email);
   useEffect(() => {
     fetch(`https://rent-car-api.onrender.com/api/car/${id.id}/`)
       .then(res => res.json())

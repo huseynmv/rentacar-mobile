@@ -20,8 +20,6 @@ const ConfirmCode = ({navigation, route}: any) => {
   const CELL_COUNT = 6;
   let email = route.params;
 
-  // CONFIRM INPUT
-
   const [loading, setloading] = useState(false);
 
   const [value, setValue] = useState('');
@@ -41,7 +39,9 @@ const ConfirmCode = ({navigation, route}: any) => {
       })
       .then(data => {
         console.log(data);
-        navigation.navigate('MyTabs');
+        navigation.navigate('MyTabs', {
+          email: email,
+        });
         setloading(false);
       })
       .catch(err => console.log(err));

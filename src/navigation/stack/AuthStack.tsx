@@ -14,9 +14,9 @@ const AuthStack = () => {
         headerShown: false,
         animation: 'slide_from_right',
       }}>
-      {/* <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="ConfirmCode" component={ConfirmCode} />
-      <Stack.Screen name="Register" component={Register} /> */}
+      <Stack.Screen name="Register" component={Register} />
 
       <Stack.Screen name="MyTabs" component={Index} />
     </Stack.Navigator>

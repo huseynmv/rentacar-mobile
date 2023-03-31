@@ -6,7 +6,7 @@ import DiscoverDetail from '../../screens/Discover/detail';
 import Confirm from '../../screens/Discover/Confirm';
 const Stack = createNativeStackNavigator();
 
-const DiscoverStack = () => {
+const DiscoverStack = ({route}: any) => {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -14,7 +14,11 @@ const DiscoverStack = () => {
         animation: 'slide_from_right',
       }}>
       <Stack.Screen name="DiscoverScreen" component={DiscoverScreen} />
-      <Stack.Screen name="DiscoverDetail" component={DiscoverDetail} />
+      <Stack.Screen
+        name="DiscoverDetail"
+        component={DiscoverDetail}
+        initialParams={{email: route.params.email}}
+      />
       <Stack.Screen name="Confirm" component={Confirm} />
     </Stack.Navigator>
   );
