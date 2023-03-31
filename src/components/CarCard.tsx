@@ -12,9 +12,10 @@ import {
 interface CardProps {
   navigateTo: any;
   item: any;
+  name: any;
 }
 
-const CarCard = ({navigateTo, item}: CardProps) => {
+const CarCard = ({navigateTo, item, name}: CardProps) => {
   return (
     <>
       <View style={styles.container}>
@@ -36,7 +37,7 @@ const CarCard = ({navigateTo, item}: CardProps) => {
               fontFamily: 'inter',
               marginVertical: 10,
             }}>
-            {item.name}
+            {name}
           </Text>
           {/* <Text>{id}</Text> */}
           <View

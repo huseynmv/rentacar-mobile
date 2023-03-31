@@ -28,7 +28,6 @@ const ConfirmCode = ({navigation, route}: any) => {
     value,
     setValue,
   });
-  console.log(value);
 
   const confirm = () => {
     setloading(true);
@@ -38,7 +37,6 @@ const ConfirmCode = ({navigation, route}: any) => {
         confirmCode: Number(value),
       })
       .then(data => {
-        console.log(data);
         navigation.navigate('MyTabs', {
           email: email,
         });

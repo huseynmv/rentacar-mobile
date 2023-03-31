@@ -25,7 +25,6 @@ const Detail = ({route, navigation}: any) => {
   const [bookLoading, setbookLoading] = useState<boolean>(false);
   let id = route.params;
   let email = route.params.email.email;
-  console.log(email);
 
   useEffect(() => {
     fetch(`https://rent-car-api.onrender.com/api/car/${id.id}/`)
@@ -33,7 +32,6 @@ const Detail = ({route, navigation}: any) => {
       .then(data => {
         setcarData(data);
         setloading(false);
-        console.log(data);
       });
   }, []);
 
@@ -46,7 +44,6 @@ const Detail = ({route, navigation}: any) => {
         name: carData.name,
       })
       .then(data => {
-        console.log(data);
         setbookLoading(false);
       });
   };
@@ -71,7 +68,10 @@ const Detail = ({route, navigation}: any) => {
               <Text style={{fontSize: 20, fontWeight: '500'}}>
                 {carData.name}
               </Text>
-              <TouchableOpacity onPress={() => dispatch(addFavorite(id))}>
+              <TouchableOpacity
+                onPress={() =>
+                  dispatch(addFavorite({id: id, name: carData.name}))
+                }>
                 <FontAwesomeIcon icon={faBookmark} size={20} />
               </TouchableOpacity>
             </View>
@@ -243,7 +243,7 @@ const Detail = ({route, navigation}: any) => {
                     borderRadius: 20,
                     opacity: 0.7,
                   }}>
-                  <MaterialIndicator />
+                  <MaterialIndicator style={{backgroundColor: 'white'}} />
                 </TouchableOpacity>
               ) : (
                 <TouchableOpacity

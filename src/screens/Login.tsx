@@ -16,7 +16,6 @@ const Login = ({navigation}: any) => {
 
   const confirmLogin = () => {
     setloading(true);
-    console.log(Useremail);
 
     axios
       .post('https://rent-car-api.onrender.com/api/auth/login', {

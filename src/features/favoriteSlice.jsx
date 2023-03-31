@@ -10,12 +10,14 @@ export const favoritesSlice = createSlice({
   initialState,
   reducers: {
     addFavorite: (state, action) => {
-      const placeId = action.payload;
-      if (!state.favorites.includes(placeId)) {
-        state.favorites.push(placeId);
-        AsyncStorage.setItem('favorites', JSON.stringify(state.favorites));
-        console.log('added');
-      }
+      let obj = {
+        id: action.payload.id,
+        name: action.payload.name,
+      };
+      state.favorites.push(obj);
+
+      AsyncStorage.setItem('favorites', JSON.stringify(state.favorites));
+      console.log('added');
     },
     removeFavorite: (state, action) => {
       const placeId = action.payload;

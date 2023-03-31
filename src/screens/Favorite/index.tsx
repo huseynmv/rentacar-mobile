@@ -6,29 +6,32 @@ import CarCard from '../../components/CarCard';
 const Index = ({navigation}: any) => {
   const dispatch = useDispatch();
   const favorites: any = useSelector<any>(state => state.favorite.favorites);
-  console.log(favorites);
+  // console.log(favorites);
+  // let names: any = [];
 
-  const [carData, setcarData] = useState<any>();
-  useEffect(() => {
-    fetch(`https://rent-car-api.onrender.com/api/car/${favorites[0].id}`)
-      .then(res => res.json())
-      .then(data => {
-        setcarData(data);
-        console.log(carData);
-      });
-  }, []);
+  // favorites.map((elem: any) => {
+  //   if (!names.includes(elem.name)) {
+  //     names.push(elem.name);
+  //   }
+  // });
+
+  // console.log(names);
 
   const renderitem = ({item}: any) => {
     return (
       <>
-        <CarCard navigateTo={navigation} item={item} />
+        <CarCard navigateTo={navigation} item={item} name={item.name} />
       </>
     );
   };
 
   return (
     <>
-      <FlatList renderItem={renderitem} data={carData} />
+      <FlatList
+        renderItem={renderitem}
+        data={favorites}
+        keyExtractor={(item, index) => index.toString()}
+      />
     </>
   );
 };

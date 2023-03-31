@@ -19,6 +19,7 @@ const Confirm = ({navigation}: any) => {
         onPress={() => {
           navigation.navigate('DiscoverScreen');
         }}>
+        <Text style={{fontSize: 24, fontWeight: '400'}}>Order Accepted</Text>
         <Text style={{fontSize: 24, fontWeight: '400', color: '#2CB67D'}}>
           Go to main page
         </Text>
