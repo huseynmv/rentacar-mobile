@@ -12,27 +12,44 @@ import {faBookmark, faBookBookmark} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {useDispatch} from 'react-redux';
 import {addFavorite} from '../../features/favoriteSlice';
-import {DotIndicator} from 'react-native-indicators';
+import {DotIndicator, MaterialIndicator} from 'react-native-indicators';
 import {
   getFocusedRouteNameFromRoute,
   useNavigation,
 } from '@react-navigation/native';
+import axios from 'axios';
 
 const Detail = ({route, navigation}: any) => {
   const [loading, setloading] = useState<any>(true);
   const [carData, setcarData] = useState<any>();
+  const [bookLoading, setbookLoading] = useState<boolean>(false);
   let id = route.params;
   let email = route.params.email.email;
   console.log(email);
+
   useEffect(() => {
     fetch(`https://rent-car-api.onrender.com/api/car/${id.id}/`)
       .then(res => res.json())
       .then(data => {
         setcarData(data);
         setloading(false);
+        console.log(data);
       });
   }, []);
 
+  const makeOrder = () => {
+    setbookLoading(true);
+    axios
+      .post('https://rent-car-api.onrender.com/api/order/create', {
+        user: email,
+        model: carData.model,
+        name: carData.name,
+      })
+      .then(data => {
+        console.log(data);
+        setbookLoading(false);
+      });
+  };
   const dispatch = useDispatch();
 
   return (
@@ -219,21 +236,33 @@ const Detail = ({route, navigation}: any) => {
               </Text>
             </View>
             <View style={{marginRight: 20}}>
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate('Confirm');
-                }}
-                style={{backgroundColor: '#2CB67D', borderRadius: 20}}>
-                <Text
+              {bookLoading ? (
+                <TouchableOpacity
                   style={{
-                    padding: 20,
-                    fontSize: 16,
-                    fontWeight: '500',
-                    color: '#ffffff',
+                    backgroundColor: '#2CB67D',
+                    borderRadius: 20,
+                    opacity: 0.7,
                   }}>
-                  Book Now
-                </Text>
-              </TouchableOpacity>
+                  <MaterialIndicator />
+                </TouchableOpacity>
+              ) : (
+                <TouchableOpacity
+                  onPress={() => {
+                    makeOrder();
+                    navigation.navigate('Confirm');
+                  }}
+                  style={{backgroundColor: '#2CB67D', borderRadius: 20}}>
+                  <Text
+                    style={{
+                      padding: 20,
+                      fontSize: 16,
+                      fontWeight: '500',
+                      color: '#ffffff',
+                    }}>
+                    Book Now
+                  </Text>
+                </TouchableOpacity>
+              )}
             </View>
           </View>
         </View>
