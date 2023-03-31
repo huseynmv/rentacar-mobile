@@ -9,7 +9,7 @@ const Confirm = ({navigation}: any) => {
       <Lottie
         source={require('../../assets/confirmation.json')}
         autoPlay
-        loop
+        loop={false}
         style={{
           width: '100%',
           height: 300,
