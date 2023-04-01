@@ -6,16 +6,6 @@ import CarCard from '../../components/CarCard';
 const Index = ({navigation}: any) => {
   const dispatch = useDispatch();
   const favorites: any = useSelector<any>(state => state.favorite.favorites);
-  // console.log(favorites);
-  // let names: any = [];
-
-  // favorites.map((elem: any) => {
-  //   if (!names.includes(elem.name)) {
-  //     names.push(elem.name);
-  //   }
-  // });
-
-  // console.log(names);
 
   const renderitem = ({item}: any) => {
     return (
@@ -27,6 +17,10 @@ const Index = ({navigation}: any) => {
 
   return (
     <>
+      <View style={{position: 'relative', flex: 1}}>
+        <Text style={{flex: 1}}>Favorites appear here</Text>
+      </View>
+
       <FlatList
         renderItem={renderitem}
         data={favorites}

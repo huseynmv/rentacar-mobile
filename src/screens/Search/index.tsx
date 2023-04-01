@@ -29,7 +29,7 @@ const Index = ({navigation}: any) => {
   const renderitem = ({item}: any) => {
     return (
       <>
-        <CarCard item={item} navigateTo={navigation} />
+        <CarCard item={item} navigateTo={navigation} name={item.name} />
       </>
     );
   };
@@ -55,9 +55,6 @@ const Index = ({navigation}: any) => {
                 margin: 12,
                 borderWidth: 1,
                 paddingLeft: 20,
-                // marginLeft: 10,
-                // position: 'absolute',
-                // marginRight: 20,
               }}
             />
             <View style={{position: 'absolute', right: 45}}>
@@ -71,9 +68,36 @@ const Index = ({navigation}: any) => {
           </View>
         </>
       ) : (
-        <View>
-          <FlatList data={data} renderItem={renderitem} />
-        </View>
+        <>
+          <View
+            style={{
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              flexDirection: 'row',
+              position: 'relative',
+              marginLeft: 10,
+            }}>
+            <TextInput
+              onChangeText={setsearchText}
+              style={{
+                height: 50,
+                width: '90%',
+                borderRadius: 30,
+                margin: 12,
+                borderWidth: 1,
+                paddingLeft: 20,
+              }}
+            />
+            <View style={{position: 'absolute', right: 45}}>
+              <TouchableOpacity onPress={() => getData()}>
+                <FontAwesomeIcon icon={faSearch} size={24} />
+              </TouchableOpacity>
+            </View>
+          </View>
+          <View>
+            <FlatList data={data} renderItem={renderitem} />
+          </View>
+        </>
       )}
     </>
   );

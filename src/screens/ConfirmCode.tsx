@@ -15,6 +15,7 @@ import {
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
 import {MaterialIndicator} from 'react-native-indicators';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const ConfirmCode = ({navigation, route}: any) => {
   const CELL_COUNT = 6;
@@ -36,10 +37,13 @@ const ConfirmCode = ({navigation, route}: any) => {
         email: email.email,
         confirmCode: Number(value),
       })
-      .then(data => {
-        navigation.navigate('MyTabs', {
-          email: email,
-        });
+      .then(async data => {
+        // console.log(data.data);
+        await AsyncStorage.setItem('userEmail', email.email);
+        await AsyncStorage.setItem('token', data.data.token);
+        console.log('Email and token has set to storage');
+
+        navigation.navigate('MyTabs');
         setloading(false);
       })
       .catch(err => console.log(err));

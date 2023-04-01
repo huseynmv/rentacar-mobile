@@ -18,13 +18,14 @@ import {
   useNavigation,
 } from '@react-navigation/native';
 import axios from 'axios';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Detail = ({route, navigation}: any) => {
   const [loading, setloading] = useState<any>(true);
   const [carData, setcarData] = useState<any>();
   const [bookLoading, setbookLoading] = useState<boolean>(false);
   let id = route.params;
-  let email = route.params.email.email;
+  // let email = route.params.email.email;
 
   useEffect(() => {
     fetch(`https://rent-car-api.onrender.com/api/car/${id.id}/`)
@@ -35,11 +36,11 @@ const Detail = ({route, navigation}: any) => {
       });
   }, []);
 
-  const makeOrder = () => {
+  const makeOrder = async () => {
     setbookLoading(true);
-    axios
+    await axios
       .post('https://rent-car-api.onrender.com/api/order/create', {
-        user: email,
+        user: await AsyncStorage.getItem('userEmail'),
         model: carData.model,
         name: carData.name,
       })

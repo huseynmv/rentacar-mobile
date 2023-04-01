@@ -9,10 +9,12 @@ import {
 import React, {useState} from 'react';
 import axios from 'axios';
 import {MaterialIndicator} from 'react-native-indicators';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Login = ({navigation}: any) => {
   const [Useremail, setUseremail] = useState('');
   const [loading, setloading] = useState(false);
+  // AsyncStorage.clear();
 
   const confirmLogin = () => {
     setloading(true);
@@ -21,8 +23,9 @@ const Login = ({navigation}: any) => {
       .post('https://rent-car-api.onrender.com/api/auth/login', {
         email: Useremail,
       })
-      .then(data => {
+      .then(async data => {
         if (data.data.statusCode == 200) {
+          // await AsyncStorage.clear();
           navigation.navigate('ConfirmCode', {
             email: Useremail,
           });

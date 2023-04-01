@@ -20,8 +20,6 @@ import AuthStack from './stack/AuthStack';
 const Tab = createBottomTabNavigator();
 
 const Index = ({route}: any) => {
-  let email = route.params.email;
-
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
@@ -33,7 +31,7 @@ const Index = ({route}: any) => {
       <Tab.Screen
         name="DiscoverStack"
         component={DiscoverStack}
-        initialParams={{email: email}}
+        // initialParams={{email: email}}
         options={({route}) => ({
           tabBarIcon: ({color}) => (
             <FontAwesomeIcon icon={faCompass} color={color} size={22} />

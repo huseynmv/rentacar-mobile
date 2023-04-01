@@ -17,7 +17,7 @@ const DiscoverStack = ({route}: any) => {
       <Stack.Screen
         name="DiscoverDetail"
         component={DiscoverDetail}
-        initialParams={{email: route.params.email}}
+        // initialParams={{email: route.params.email}}
       />
       <Stack.Screen name="Confirm" component={Confirm} />
     </Stack.Navigator>
