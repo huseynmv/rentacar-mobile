@@ -25,7 +25,7 @@ const CarCard = ({navigateTo, item, name}: CardProps) => {
             <Image
               style={styles.img}
               source={{
-                uri: 'https://s3-alpha-sig.figma.com/img/2aee/24b5/030568ec6280e68d5cd8c5b848c9376e?Expires=1679270400&Signature=Vbjho2c5WsR0CtNbZdG-nFVWd8vQCSj45h4jaI9PIxeBH-TZVAW1KUkeu3cAfiMjPDx2EDjHGlTgTXb9V6MniJHt-Poe598rStkPJUlODYal1Lp57XNpjEM6hB1FmjSBH1VI6cTvEtJlpMpaZoNKciUnWcyqvBvXx1J78O-MoWAWpq0tT59TmrXmMKEHxyYZVp3Ge5e01d~9T-1lpfsh71fs36KMUjTHQz02LLd5EVGcO098xaBL4arPQhHIOPXiiCtk9OTMZd61s4KMmhwdU7q4lb6oGzOTzMcchsfdUpReNCPJUxGjbE~bXyePBElardJz4syUJ3IUCe8PdsjKHw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                uri: 'https://s3-alpha-sig.figma.com/img/2aee/24b5/030568ec6280e68d5cd8c5b848c9376e?Expires=1681084800&Signature=CUsa5OwD~n0DgCA9pg3Iajmlq8zB9UyfZDA4~4EaFPyxrO1Lpj0ajCKpTi6lXUn5a2TwbxFRkg3z-N42i2EIVynfHJACLYC07M-hkCFk8IL0keT7PcyGp~azbmFSMLxcuheLGJ56uonLeBr~rFDG-wrGjQpVW0Iqgh9LDTDDqXg2T7hNXday3UV3oWVyezcxoKdO8q8EV5qTfGyYWIAakOGVjkWXXu5PQZXBOMwe6tUVrIZW7DzzCayIsFXS4CBXVKhjwTSSRvErqkkLUNBwmNz75ptZemwEkl06btiX8zF7GygZyQRombXVvVSQ6-5eyD4gtd~FPm~gpCT~Yxh-ww__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
               }}
             />
           </View>

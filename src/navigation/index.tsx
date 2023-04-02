@@ -27,6 +27,7 @@ const Index = ({route}: any) => {
           display: 'flex',
           backgroundColor: '#16161A',
         },
+        tabBarShowLabel: false,
       })}>
       <Tab.Screen
         name="DiscoverStack"
@@ -36,6 +37,8 @@ const Index = ({route}: any) => {
           tabBarIcon: ({color}) => (
             <FontAwesomeIcon icon={faCompass} color={color} size={22} />
           ),
+          headerShown: false,
+          tabBarActiveTintColor: '#2CB67D',
         })}
       />
       <Tab.Screen
@@ -45,6 +48,7 @@ const Index = ({route}: any) => {
           tabBarIcon: ({color}) => (
             <FontAwesomeIcon icon={faBookmark} color={color} size={22} />
           ),
+          tabBarActiveTintColor: '#2CB67D',
         })}
       />
       <Tab.Screen
@@ -54,6 +58,7 @@ const Index = ({route}: any) => {
           tabBarIcon: ({color}) => (
             <FontAwesomeIcon icon={faSearch} color={color} size={22} />
           ),
+          tabBarActiveTintColor: '#2CB67D',
         })}
       />
       <Tab.Screen
@@ -63,6 +68,7 @@ const Index = ({route}: any) => {
           tabBarIcon: ({color}) => (
             <FontAwesomeIcon icon={faUser} color={color} size={22} />
           ),
+          tabBarActiveTintColor: '#2CB67D',
         })}
       />
     </Tab.Navigator>

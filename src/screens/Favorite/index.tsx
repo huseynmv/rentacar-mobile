@@ -17,15 +17,19 @@ const Index = ({navigation}: any) => {
 
   return (
     <>
-      <View style={{position: 'relative', flex: 1}}>
-        <Text style={{flex: 1}}>Favorites appear here</Text>
-      </View>
-
-      <FlatList
-        renderItem={renderitem}
-        data={favorites}
-        keyExtractor={(item, index) => index.toString()}
-      />
+      {favorites.length > 0 ? (
+        <FlatList
+          renderItem={renderitem}
+          data={favorites}
+          keyExtractor={(item, index) => index.toString()}
+        />
+      ) : (
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+          <Text style={{fontSize: 26, opacity: 0.7}}>
+            Favorites appear here
+          </Text>
+        </View>
+      )}
     </>
   );
 };
