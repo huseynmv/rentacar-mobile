@@ -21,23 +21,14 @@ const AuthStack = () => {
         if (res) {
           settoken(true);
           setloading(false);
+        } else {
+          setloading(false);
         }
-
-        // console.log('res', res);
-
-        // token.push(res);
-        // console.log('token array', token);
-        // console.log('token 0', token[0]);
       });
     };
-    // const clear = async () => {
-    //   await AsyncStorage.clear().then(data => {
-    //     console.log('cleared');
-    //   });
-    // };
-    // clear();
-
     getToken();
+    console.log('got token');
+
     console.log(token);
   }, []);
 
