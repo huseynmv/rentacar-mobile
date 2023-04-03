@@ -10,8 +10,8 @@ import React, {Fragment, useEffect, useState, useLayoutEffect} from 'react';
 import {faBookmark, faBookBookmark} from '@fortawesome/free-solid-svg-icons';
 // import {Icon} from 'react-native-vector-icons/Icon';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {useDispatch} from 'react-redux';
-import {addFavorite} from '../../features/favoriteSlice';
+import {useDispatch, useSelector} from 'react-redux';
+import {addFavorite, removeFavorite} from '../../features/favoriteSlice';
 import {DotIndicator, MaterialIndicator} from 'react-native-indicators';
 import {
   getFocusedRouteNameFromRoute,
@@ -25,11 +25,28 @@ const Detail = ({route, navigation}: any) => {
   const [carData, setcarData] = useState<any>();
   const [bookLoading, setbookLoading] = useState<boolean>(false);
   const [color, setcolor] = useState('black');
-  let id = route.params;
+  let carId = route.params;
+  // console.log(id);
+
   // let email = route.params.email.email;
 
+  const favorites: any = useSelector<any>(state => state.favorite.favorites);
+  console.log(favorites);
+
+  const isFavorite: any = favorites.some(
+    (favorite: {id: any}) => favorite.id == favorites.id,
+  );
+
+  const handlePress = () => {
+    if (isFavorite) {
+      dispatch(removeFavorite({id: carId}));
+    } else {
+      dispatch(addFavorite({id: carId, name: carData.name, img: carData.img}));
+    }
+  };
+
   useEffect(() => {
-    fetch(`https://rent-car-api.onrender.com/api/car/${id.id}/`)
+    fetch(`https://rent-car-api.onrender.com/api/car/${carId.id}/`)
       .then(res => res.json())
       .then(data => {
         setcarData(data);
@@ -68,13 +85,10 @@ const Detail = ({route, navigation}: any) => {
                 padding: 20,
               }}>
               <Text style={{fontSize: 20, fontWeight: '500'}}>
-                {carData.name}
+                {carData.model}
               </Text>
-              <TouchableOpacity
-                onPress={() => {
-                  dispatch(addFavorite({id: id, name: carData.name}));
-                  setcolor('#2CB67D');
-                }}>
+
+              <TouchableOpacity onPress={handlePress}>
                 <FontAwesomeIcon
                   icon={faBookmark}
                   style={{color: color}}
@@ -89,7 +103,7 @@ const Detail = ({route, navigation}: any) => {
                   height: 150,
                 }}
                 source={{
-                  uri: 'https://s3-alpha-sig.figma.com/img/2aee/24b5/030568ec6280e68d5cd8c5b848c9376e?Expires=1681084800&Signature=CUsa5OwD~n0DgCA9pg3Iajmlq8zB9UyfZDA4~4EaFPyxrO1Lpj0ajCKpTi6lXUn5a2TwbxFRkg3z-N42i2EIVynfHJACLYC07M-hkCFk8IL0keT7PcyGp~azbmFSMLxcuheLGJ56uonLeBr~rFDG-wrGjQpVW0Iqgh9LDTDDqXg2T7hNXday3UV3oWVyezcxoKdO8q8EV5qTfGyYWIAakOGVjkWXXu5PQZXBOMwe6tUVrIZW7DzzCayIsFXS4CBXVKhjwTSSRvErqkkLUNBwmNz75ptZemwEkl06btiX8zF7GygZyQRombXVvVSQ6-5eyD4gtd~FPm~gpCT~Yxh-ww__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                  uri: carData.img,
                 }}
               />
             </View>
@@ -126,8 +140,8 @@ const Detail = ({route, navigation}: any) => {
                   marginRight: 5,
                 }}>
                 <Text style={{marginBottom: 5}}>Icon</Text>
-                <Text>Max Power</Text>
-                <Text>320 hp</Text>
+                <Text>Max distan</Text>
+                <Text>{carData.fuel}</Text>
               </View>
               <View
                 style={{
@@ -138,8 +152,8 @@ const Detail = ({route, navigation}: any) => {
                   marginRight: 5,
                 }}>
                 <Text style={{marginBottom: 5}}>Icon</Text>
-                <Text>Max Power</Text>
-                <Text>320 hp</Text>
+                <Text>0-60 mph/h</Text>
+                <Text>{carData.sec}</Text>
               </View>
               <View
                 style={{
@@ -150,8 +164,8 @@ const Detail = ({route, navigation}: any) => {
                   marginRight: 5,
                 }}>
                 <Text style={{marginBottom: 5}}>Icon</Text>
-                <Text>Max Power</Text>
-                <Text>320 hp</Text>
+                <Text>Max speed</Text>
+                <Text>{carData.maxSpeed}</Text>
               </View>
             </View>
             <Text style={{padding: 20, fontSize: 16, fontWeight: '500'}}>
@@ -200,7 +214,7 @@ const Detail = ({route, navigation}: any) => {
                     fontSize: 16,
                     fontWeight: '400',
                   }}>
-                  2 Passengers
+                  {carData.doorCount} Door count
                 </Text>
                 <Text
                   style={{

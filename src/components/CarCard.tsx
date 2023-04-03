@@ -8,6 +8,8 @@ import {
   faDoorOpen,
   faSun,
 } from '@fortawesome/free-solid-svg-icons';
+import {useDispatch, useSelector} from 'react-redux';
+import {addFavorite, removeFavorite} from '../features/favoriteSlice';
 
 interface CardProps {
   navigateTo: any;
@@ -25,7 +27,7 @@ const CarCard = ({navigateTo, item, name}: CardProps) => {
             <Image
               style={styles.img}
               source={{
-                uri: 'https://s3-alpha-sig.figma.com/img/2aee/24b5/030568ec6280e68d5cd8c5b848c9376e?Expires=1681084800&Signature=CUsa5OwD~n0DgCA9pg3Iajmlq8zB9UyfZDA4~4EaFPyxrO1Lpj0ajCKpTi6lXUn5a2TwbxFRkg3z-N42i2EIVynfHJACLYC07M-hkCFk8IL0keT7PcyGp~azbmFSMLxcuheLGJ56uonLeBr~rFDG-wrGjQpVW0Iqgh9LDTDDqXg2T7hNXday3UV3oWVyezcxoKdO8q8EV5qTfGyYWIAakOGVjkWXXu5PQZXBOMwe6tUVrIZW7DzzCayIsFXS4CBXVKhjwTSSRvErqkkLUNBwmNz75ptZemwEkl06btiX8zF7GygZyQRombXVvVSQ6-5eyD4gtd~FPm~gpCT~Yxh-ww__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+                uri: item.img,
               }}
             />
           </View>
@@ -57,7 +59,7 @@ const CarCard = ({navigateTo, item, name}: CardProps) => {
               <FontAwesomeIcon icon={faGear} size={20} color="gray" />
               <Text
                 style={{fontSize: 16, fontWeight: '400', paddingHorizontal: 5}}>
-                A/T
+                {item.type}
               </Text>
             </View>
             <View
@@ -71,7 +73,7 @@ const CarCard = ({navigateTo, item, name}: CardProps) => {
               <FontAwesomeIcon icon={faPersonShelter} size={20} color="gray" />
               <Text
                 style={{fontSize: 16, fontWeight: '400', paddingHorizontal: 5}}>
-                5
+                {item.passengerCount}
               </Text>
             </View>
             <View
@@ -85,7 +87,7 @@ const CarCard = ({navigateTo, item, name}: CardProps) => {
               <FontAwesomeIcon icon={faDoorOpen} size={20} color="gray" />
               <Text
                 style={{fontSize: 16, fontWeight: '400', paddingHorizontal: 5}}>
-                4
+                {item.doorCount}
               </Text>
             </View>
             <View

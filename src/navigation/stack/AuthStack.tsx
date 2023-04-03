@@ -26,8 +26,12 @@ const AuthStack = () => {
         }
       });
     };
+    const clear = async () => {
+      await AsyncStorage.clear();
+    };
     getToken();
     console.log('got token');
+    // clear();
 
     console.log(token);
   }, []);

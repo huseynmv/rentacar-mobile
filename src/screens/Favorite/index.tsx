@@ -8,6 +8,8 @@ const Index = ({navigation}: any) => {
   const favorites: any = useSelector<any>(state => state.favorite.favorites);
 
   const renderitem = ({item}: any) => {
+    console.log(item);
+
     return (
       <>
         <CarCard navigateTo={navigation} item={item} name={item.name} />
