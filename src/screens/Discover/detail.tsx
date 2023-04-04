@@ -12,7 +12,11 @@ import {faBookmark, faBookBookmark} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {useDispatch, useSelector} from 'react-redux';
 import {addFavorite, removeFavorite} from '../../features/favoriteSlice';
-import {DotIndicator, MaterialIndicator} from 'react-native-indicators';
+import {
+  DotIndicator,
+  MaterialIndicator,
+  PacmanIndicator,
+} from 'react-native-indicators';
 import {
   getFocusedRouteNameFromRoute,
   useNavigation,
@@ -42,6 +46,7 @@ const Detail = ({route, navigation}: any) => {
       dispatch(removeFavorite({id: carId}));
     } else {
       dispatch(addFavorite({id: carId, name: carData.name, img: carData.img}));
+      setcolor('#2CB67D');
     }
   };
 
@@ -72,7 +77,7 @@ const Detail = ({route, navigation}: any) => {
     <>
       {loading ? (
         <View style={{flex: 1}}>
-          <DotIndicator size={24} color="#2CB67D" />
+          <PacmanIndicator size={24} color="#2CB67D" />
         </View>
       ) : (
         <View style={{flex: 2}}>
@@ -194,7 +199,7 @@ const Detail = ({route, navigation}: any) => {
                     fontSize: 16,
                     fontWeight: '400',
                   }}>
-                  Show tires
+                  Snow tires
                 </Text>
                 <Text
                   style={{
@@ -214,7 +219,7 @@ const Detail = ({route, navigation}: any) => {
                     fontSize: 16,
                     fontWeight: '400',
                   }}>
-                  {carData.doorCount} Door count
+                  {carData.doorCount} Door
                 </Text>
                 <Text
                   style={{
@@ -223,7 +228,7 @@ const Detail = ({route, navigation}: any) => {
                     fontSize: 16,
                     fontWeight: '400',
                   }}>
-                  Show tires
+                  Gps
                 </Text>
                 <Text
                   style={{
@@ -232,7 +237,7 @@ const Detail = ({route, navigation}: any) => {
                     fontSize: 16,
                     fontWeight: '400',
                   }}>
-                  Bluetooth
+                  Manual
                 </Text>
               </View>
             </View>

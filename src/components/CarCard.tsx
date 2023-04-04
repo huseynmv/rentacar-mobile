@@ -155,12 +155,13 @@ const styles = StyleSheet.create({
   img: {
     width: 300,
     height: 150,
+    backgroundColor: 'white',
   },
   imgContainer: {
     borderRadius: 20,
 
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5F6F8',
+    backgroundColor: 'white',
   },
 });

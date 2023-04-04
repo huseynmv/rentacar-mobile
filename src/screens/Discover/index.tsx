@@ -14,6 +14,8 @@ const Index = ({navigation, route}: any) => {
       .then(res => res.json())
       .then(data => {
         setCardata(data);
+        console.log('got data');
+
         setloading(false);
       });
   }, []);
@@ -32,10 +34,12 @@ const Index = ({navigation, route}: any) => {
         <DotIndicator color="#2CB67D" />
       ) : (
         <FlatList
+          style={{marginTop: 15}}
           renderItem={renderItem}
           keyExtractor={carData && carData.id}
           data={carData}
           key={carData && carData.id}
+          inverted={false}
         />
       )}
     </>
